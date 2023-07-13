@@ -38,7 +38,7 @@ def main():
 
         result = operator_func(number_1, number_2)
 
-        colored_print(f"%nYou result is %i{result}")
+        colored_print(f"%nYou result is %ui{result}")
 
         user_input = colored_input(f'Start Another Calculation? %i("{RESTART_KEYWORD}": yes, Any: stop)')
         if user_input == RESTART_KEYWORD:
