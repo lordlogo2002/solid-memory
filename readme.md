@@ -5,6 +5,9 @@ to input two integer or float values, along with an operator to perform the calc
 supports various operations, and you can even add your own custom operators. The program also offers the
 option to activate or deactivate colored output.
 
+ - This idea is inspired by: [@MakiWolf] (https://github.com/MakiWolf)
+ - project: https://github.com/MakiWolf/easysimplifiedcalculator1
+
 ## Usage
 
 1. Run the main.py script.
