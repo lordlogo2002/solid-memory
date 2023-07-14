@@ -23,7 +23,7 @@ option to activate or deactivate colored output.
 
 ## Adding Custom Operators
 
-### To add your own custom operators, follow these steps:
+To add your own custom operators, follow these steps:
 
 1. Open the operations.py file.
 2. Define your operator as a lambda function that takes two arguments and performs the desired calculation. For example, to define a custom operator "**" for exponentiation, you can
