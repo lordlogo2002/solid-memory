@@ -50,7 +50,7 @@ option to activate or deactivate colored output.
 
 4. Save the operations.py file.
 
-#### You can now use your custom operator in the calculator by entering the corresponding math symbol.
+You can now use your custom operator in the calculator by entering the corresponding math symbol.
 
 ## Activating/Deactivating Colored Output
 
