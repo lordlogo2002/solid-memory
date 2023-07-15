@@ -3,9 +3,7 @@ from operations import OPERATIONS, operator_collection
 from data import request_data_from_user, check_input_for_number
 from colored import colored_input, colored_print, run_colored
 
-RESTART_KEYWORD = "1"
-PROGRAM_VERSION = "0.0.6"
-
+RESTART_KEYWORD = "1
 clear_screen = lambda: os.system("cls")
 
 def show_menu() -> None:
