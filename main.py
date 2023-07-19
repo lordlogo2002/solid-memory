@@ -42,11 +42,9 @@ def main():
         colored_print(f"%nYou result is %ui{result}")
 
         user_input = colored_input(f'Start Another Calculation? %i("{RESTART_KEYWORD}": yes, Any: stop)')
-        if user_input == RESTART_KEYWORD:
-            clear_screen()
-            continue
+        program_active = user_input == RESTART_KEYWORD
+        clear_screen()
 
-        break
 
 if __name__ == "__main__":
     run_colored(main)
