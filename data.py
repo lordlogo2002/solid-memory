@@ -57,6 +57,12 @@ def request_data_from_user(prompt:str, error_case:Callable, validation_func:Call
         Exceptions:
             TypeError: if you pass a not callable object to error_case or validation_func
     """
+    if not callable(error_cass):
+        raise TypeError(f"while requesting prompt '{prompt}' an invalid capable was given: error_case: {error_case}")
+    
+    if not callable(validation_func):
+        raise TypeError(f"while requesting prompt '{prompt}' an invalid capable was given: validation_func: {validation_func}")
+
     while USER_INPUT_INVALID:
         user_input = colored_input(prompt)
         check_result = validation_func(user_input)
