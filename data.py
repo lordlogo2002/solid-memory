@@ -1,22 +1,6 @@
 from typing import Callable, Any
 from colored import colored_input, error_message
 
-USER_INPUT_INVALID = True
-
-class Storage:
-    stored = {}
-
-    @classmethod
-    def store_value(cls, name:str, value:int|float) -> None:
-        cls.store_value[name] = value
-
-    @classmethod
-    def delete_value(cls, name:str) -> bool:
-        if name not in cls.store_value:
-            return False
-        del cls.store_value[name]
-        return True
-
 def check_input_for_number(value:str) -> float|int|None:
     """
         Check if the input of the user is either an integer or a float value
@@ -63,10 +47,11 @@ def request_data_from_user(prompt:str, error_case:Callable, validation_func:Call
     if not callable(validation_func):
         raise TypeError(f"while requesting prompt '{prompt}' an invalid capable was given: validation_func: {validation_func}")
 
-    while USER_INPUT_INVALID:
+    check_result = None
+    while check_result is None:
         user_input = colored_input(prompt)
         check_result = validation_func(user_input)
         if check_result is None:
             error_message(error_case(user_input))
             continue
-        return check_result
+    return check_result
