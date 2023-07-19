@@ -33,6 +33,9 @@ def main():
         number_2 = request_data_from_user(prompt="Please enter the second number: ",
                 error_case=lambda x: f'%i"{x}"%e is not a valid input, please enter only %ifloat%e or %iinteger%e values!',
                 validation_func=check_input_for_number)
+        
+        if not callable(operator_func):
+        	raise TypeError(f"the action set for the current operator is not a callable: {operator_func}")
 
         result = operator_func(number_1, number_2)
 
@@ -47,3 +50,4 @@ def main():
 
 if __name__ == "__main__":
     run_colored(main)
+    
